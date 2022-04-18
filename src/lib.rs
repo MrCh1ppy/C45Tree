@@ -60,7 +60,7 @@ pub mod lib {
                     .iter()
                     .for_each(|cur| println!("{:?}", cur));
                 if let Ok(node) = builder::build_tree(data_set) {
-                    println!("{}", node.property_name());
+                    println!("{}", printer::tree_to_string(node));
                 }
             }
             Err(error) => {
